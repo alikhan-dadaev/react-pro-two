@@ -17,13 +17,13 @@ function App() {
   return (
     <div className="App">
      <div> Списко постов: </div>
-      {loading ? 'Идет загрузка....': (posts.map(post => {
+      <div className="loading">{loading ? 'Идет загрузка....': (posts.map(post => {
         return (
-            <div>
+            <div className='body'>
               {post.body}
             </div>
         )
-      }))}
+      }))}</div>
     </div>
   );
 }
